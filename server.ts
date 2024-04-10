@@ -17,6 +17,11 @@ export function app(): express.Express {
   server.set('view engine', 'html');
   server.set('views', browserDistFolder);
 
+  console.log(' == Express Works Well == ');
+  server.get('/required-page', (req, res) => {
+    res.send('Successful!!');
+  });
+
   // Example Express Rest API endpoints
   // server.get('/api/**', (req, res) => { });
   // Serve static files from /browser
